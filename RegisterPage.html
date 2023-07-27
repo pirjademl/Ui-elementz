@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 350px;
+            padding: 20px;
+            gap: 10px;
+            position: relative;
+        }
+
+        .title {
+            font-size: 29px;
+            color: royalblue;
+            letter-spacing: -1px;
+            font-weight: 600;
+            padding-left: 30px;
+            position: relative;
+
+
+        }
+
+        .title::before,
+        .title::after {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            background-color: royalblue;
+            top: 7px;
+            left: 0;
+            border-radius: 50%;
+
+        }
+
+        .title::before {
+            height: 18px;
+            width: 18px;
+
+        }
+
+        .title::after {
+            height: 18px;
+            width: 18px;
+            animation: pulse 1s linear infinite;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(0.9);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+
+        }
+
+        .flex {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .form label {
+            position: relative;
+        }
+
+        .form label .input {
+            width: 100%;
+            padding: 10px 10px 20px 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(87, 87, 88, 0.822);
+            outline: 0;
+        }
+
+        .form label .input+span {
+            position: absolute;
+            left: 10px;
+            top: 15px;
+            color: gray;
+            transition: 0.3s ease;
+            font-size: 0.9em;
+
+        }
+
+        .form label .input:placeholder-shown+span {
+            font-size: 0.9em;
+            top: 15px;
+            color: gray;
+        }
+
+        .form label .input:focus+span,
+        .form label .input:valid+span {
+            top: 30px;
+        }
+
+        .form label .input:valid+span {
+            color: green;
+        }
+
+        .message,
+        .signin {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .signin {
+            text-align: center;
+        }
+
+        .submit {
+            background-color: royalblue;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .submit:hover{
+            background-color: rgb(58, 82, 155);
+        }
+    </style>
+</head>
+<form action="" class="form">
+    <p class="title">Register</p>
+    <p class="message">Sign up now and get full access to our app</p>
+    <div class="flex">
+        <label for="">
+            <input type="text" placeholder="" required="" class="input">
+            <span>FirstName</span>
+        </label>
+        <label for="">
+            <input type="text" placeholder="" required="" class="input">
+            <span>LastName</span>
+        </label>
+    </div>
+    <label for="">
+        <input type="email" placeholder="" required="" class="input">
+        <span>Email</span>
+    </label>
+    <label for="">
+        <input type="password" placeholder="" required="" class="input">
+        <span>Password</span>
+    </label>
+    <label for="">
+        <input type="password" placeholder="" required="" class="input">
+        <span>Confirm Password</span>
+    </label>
+    <button class="submit">Submit</button>
+    <p class="signin">Already have a account ? <a href="signin">Signin</a></p>
+</form>
+
+<body>
+
+</body>
+
+</html>
