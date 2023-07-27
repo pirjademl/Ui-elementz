@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+            padding: 30px;
+            gap: 20px;
+            justify-content: center;
+            align-self: center;
+            border-radius: 15px;
+            border: 1px solid whitesmoke;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            position: relative;
+            top: 200px;
+            left: 300px;
+        }
+
+        .title {
+            font-size: 28px;
+            color: royalblue;
+            letter-spacing: -1px;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+
+        }
+
+        .form label {
+            position: relative;
+        }
+
+        .form label .input {
+            width: 100%;
+            padding: 10px 10px 20px 10px;
+            border-radius: 10px;
+            outline: 0;
+            border: 1px solid gray;
+
+
+
+
+        }
+
+        .title::before,
+        .title::after {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 0px;
+            background-color: royalblue;
+            top: 10px;
+            border-radius: 50%;
+
+        }
+
+        .title::before {
+            height: 18px;
+            width: 18px;
+        }
+
+        .title::after {
+            height: 18px;
+
+            width: 18px;
+            animation: pulse-animation 1s linear infinite;
+        }
+
+        @keyframes pulse-animation {
+            from {
+                transform: scale(0.9);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(1.9);
+                opacity: 0;
+            }
+        }
+
+        .form label .input+span {
+            position: absolute;
+            font-size: 0.9em;
+            color: gray;
+            top: 15px;
+            transition: 0.3s ease-in-out;
+            left: 10px;
+        }
+
+        .form label .input:placeholder-shown {
+            top: 15px;
+            font-size: 0.9em;
+
+
+        }
+
+        .form label .input:focus+span,
+        .form label .input:valid+span {
+            top: 30px;
+            font-size: 0.7em;
+            font-weight: 600;
+
+        }
+
+        .form label .input:valid+span {
+            color: green;
+        }
+
+        .signup {
+            font-size: 14px;
+            text-align: center;
+
+        }
+
+        .login {
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-size: 0.9em;
+            outline: 0;
+            border: 1px solid gray;
+            background-color: royalblue;
+            cursor: pointer;
+        }
+
+        .login:hover {
+            background-color: rgb(12, 22, 115);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <p class="title">Login </p>
+            <label for="">
+                <input type="email" placeholder="" required="" class="input">
+                <span>Username</span>
+            </label>
+            <label for="">
+                <input type="password" placeholder="" required="" class="input">
+                <span>Password</span>
+            </label>
+            <button class="login">
+                Login
+            </button>
+            <p class="signup">Don't have a account <a href="signup">signup</a></p>
+        </form>
+    </div>
+</body>
+
+</html>
