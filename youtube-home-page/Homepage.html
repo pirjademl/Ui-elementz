@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3e8757280b.js" crossorigin="anonymous"></script>
+   
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        .nav-right img {
+
+            border-radius: 50%;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-right {
+            padding: 12px;
+            margin: 12px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-center {
+            /* padding: 12px; */
+            /* margin: 12px; */
+            /* display: flex;
+            gap: 12px; */
+            /* margin: 30px;[add] */
+            padding: 12px;
+            margin: 12px;
+        }
+
+
+
+        .nav-right li {
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            padding: 12px;
+            list-style-type: none;
+            cursor: pointer;
+            color: whitesmoke;
+        }
+
+        .nav-right li:hover {
+            border-radius: 5px;
+            background-color: #61677A;
+        }
+
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            font-family: 'Poppins', sans-serif;
+
+
+
+        }
+
+        .nav-left {
+            margin: 12px;
+            display: flex;
+            gap: 12px;
+            ;
+
+        }
+
+        #menu {
+            margin: 12px;
+            padding: 12px;
+            border-radius: 3px;
+
+        }
+
+        #menu:hover {
+
+            background-color: #61677A;
+        }
+
+
+
+        .ytlogo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .sidebar {
+            box-sizing: content-box;
+            position: absolute;
+            scroll-behavior: smooth;
+            top: 100px;
+            background-color: rgba(0, 4, 7, 0.988);
+            width: 15vw;
+            letter-spacing: 0px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            gap: 20px;
+            /* height: 100vh; */
+            z-index: -1;
+            padding: 10px 10px 0px 10px;
+            padding-top: 5px;
+        }
+
+
+        .fa-house {
+            padding: 3px;
+            color: white;
+        }
+
+        .side-nav-bar {
+            display: inline-block;
+            cursor: pointer;
+            padding: 12px 12px 12px 12px;
+            list-style-type: none;
+            color: white;
+            transition: transform 0.45s ease-in-out;
+
+        }
+
+        .side-nav-bar:hover {
+            transform: translateX(7px);
+            border-right: 2px solid rgb(242, 236, 236);
+            border-left: 2px solid rgb(242, 236, 236);
+
+            background-color: #61677A;
+        }
+
+        .nav-lbl {
+            margin-left: 12px;
+        }
+
+        .divider-op {
+            margin: 6px 0 12px 0;
+            border-right: 0.3px solid gray;
+            background-color: green;
+        }
+
+        .sidebar .message {
+            color: white;
+        }
+
+        .nav-elements {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sign-in-btn {
+            background-color: #130808;
+            color: white;
+            width: 50%;
+            margin-left: 55px;
+            font-family: 'Poppins', sans-serif;
+            padding: 5px;
+            font: bold;
+            font-weight: 1111;
+            border-radius: 12px;
+            outline: 5px solid royalblue;
+            cursor: pointer;
+            offset: 4px;
+
+        }
+
+        .sign-in-btn:hover {
+
+            background-color: #A076F9;
+        }
+
+        .Search-input {
+            padding: 10px;
+            background-color: black;
+            border-radius: 12px;
+            width: 32vw;
+            border: 2px solid gray;
+            color: white;
+
+            transition: width 0.4s ease-in-out;  
+        }
+
+        .Search-input:focus {
+            width: 35vw;
+            border: 2px solid royalblue;
+        }
+        .first{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+        <ul class="nav-left">
+
+            <a id="menu" href="">
+                &#9776;
+            </a>
+            <img class="ytlogo" src="yt-logo.png" alt="">
+        </ul>
+        <ul class="nav-center">
+            <input class="Search-input" type="search" name="" placeholder="Search" id="">
+        </ul>
+
+        <ul class="nav-right">
+            <li><i class="fa-solid fa-plus"></i></li>
+            <li> <i class="fa-regular fa-bell"></i></li>
+            <a href=""><img src="yt-logo.png" height="50" width="50" alt=""></a>
+
+
+        </ul>
+
+    </div>
+
+    <div class="sidebar">
+        <ul class="nav-elements">
+            <li class="side-nav-bar">
+                <i class="fa-solid fa-house">
+
+                </i>
+                <span class="nav-lbl">Home</span>
+            </li>
+            <li class="side-nav-bar">
+                <i class="fa-solid fa-box-open"></i>
+                <span class="nav-lbl">Shorts</span>
+            </li>
+            <li class="side-nav-bar">
+                <!-- <i class="fa-solid fa-fire"></i> for later use for the trending -->
+                <i class="fa-solid fa-dollar-sign"></i>
+                <span class="nav-lbl">Subscription</span>
+            </li>
+            <hr class="divider-op">
+            <li class="side-nav-bar">
+                <i class="fa-solid fa-book"></i>
+                <span class="nav-lbl">Library</span>
+            </li>
+            <li class="side-nav-bar">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span class="nav-lbl">History</span>
+            </li>
+        </ul>
+        <hr class="divider-op">
+        <p class="message first">
+            Sign in to like videos, comments, and subscribe
+
+        </p>
+        <button class="sign-in-btn">Sign In </button>
+        <hr class="divider-op">
+        <p class="message">Explore</p>
+        <li class="side-nav-bar">
+            <i class="fa-solid fa fa-clock-rotate-left"></i>
+            <span>Trending</span>
+        </li>
+        <li class="side-nav-bar">
+            <i class="fa-solid fa fa-clock-rotate-left"></i>
+            <span>Shopping</span>
+        </li>
+        <li class="side-nav-bar">
+            <i class="fa-solid fa fa-clock-rotate-left"></i>
+            <span>Music</span>
+        </li>
+        <li class="side-nav-bar">
+            <i class="fa-solid fa fa-clock-rotate-left"></i>
+            <span>Movies</span>
+        </li>
+    </div>
+
+    <div class="main-content">
+        This is the main content
+    </div>
+
+</body>
+
+</html>
