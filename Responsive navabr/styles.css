@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    /* padding-inline: 2rem; */
+    justify-content: space-between;
+    background-color: #333;
+    align-items: center;
+
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.brand-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.775rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: row;
+    padding: .8rem;
+    background-color: whitesmoke;
+    gap: 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.card h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+}
+
+.card img {
+    height: 50%;
+}
+
+.card .content {
+    color: black;
+    font-size: 1em;
+}
+
+.learn-more-info {
+    padding: 18px;
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.9867rem;
+}
+
+
+
+@media(min-width:48em) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card .content {
+        font-size: 1.2em;
+    }
+}
+
+@media(max-width:600px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        width: 100%;
+        display: none;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
