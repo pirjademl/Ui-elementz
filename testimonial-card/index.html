@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+        .container {
+            max-width: 400px;
+            border: 1px solid rgb(197, 205, 227);
+            padding: 10px;
+            box-shadow: 10px 10px 8px gray;
+            border-radius: 12px;
+        }
+
+        .heading {
+            font-size: 30px;
+            font-weight: 400;
+            font-family: 'Gabarito', cursive;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+
+        .info {
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .profile {
+            /* padding: 20px; */
+
+            display: flex;
+            gap: 1rem;
+        }
+
+        .info>p {
+            font-weight: bold;
+            font-family: 'Gabarito', cursive;
+        }
+
+        img {
+            height: 99px;
+            border-radius: 50%;
+            border: 3px solid royalblue;
+        }
+
+        .message {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+
+        }
+
+        .message::before,
+        .message::after {
+            position: absolute;
+            content: "" "";
+            color: black;
+
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 3rem;
+        }
+
+        .company-name {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <div class="wrapper">
+            <div class="container">
+                <h1 class="heading">Front End Devloper </h1>
+                <div class="profile"><img src="https://i.pravatar.cc/300" alt="">
+                    <div class="info">
+                        <p>Neeraj Walia</p>
+
+                        <p>Technical lead</p>
+
+                    </div>
+
+                </div>
+                <p class="message">"I am very thankful for this course which landed me this job "</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <h1 class="heading">Front End Devloper </h1>
+                <div class="profile"><img src="https://i.pravatar.cc/500" alt="">
+                    <div class="info">
+                        <p>Neeraj Walia</p>
+
+                        <p>Technical lead</p>
+
+                    </div>
+
+                </div>
+                <p class="message">"I am very thankful for this course which landed me this job "</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
